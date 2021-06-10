@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListController">
+   <children>
+      <VBox layoutX="46.0" layoutY="345.0" spacing="20.0">
+         <children>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnCreateRandomListHandler" text="Create Random List" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnInsertNewElementHandler" text="Insert new element" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnRemoveElementHandler" text="Remove element" />
+            <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnFindElementHandler" text="Find element" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetHandler" text="Reset" />
+         </children>
+      </VBox>
+      <HBox fx:id="hbCreate" layoutX="200.0" layoutY="345.0" spacing="15.0" visible="false">
+         <children>
+            <TextField fx:id="tfLength" promptText="enter length" />
+            <Button mnemonicParsing="false" onAction="#btnCreateHandler" text="create" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbInsert" layoutX="200.0" layoutY="390.0" spacing="15.0" visible="false">
+         <children>
+            <TextField fx:id="tfPositionInsert" maxWidth="100.0" promptText="position" />
+            <TextField fx:id="tfValue" maxWidth="100.0" promptText="value" />
+            <Button fx:id="insertBtn" mnemonicParsing="false" onAction="#btnInsertHandler" text="insert" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbRemove" layoutX="200.0" layoutY="435.0" spacing="15.0" visible="false">
+         <children>
+            <TextField fx:id="tfPositionRemove" promptText="enter position" />
+            <Button fx:id="removeBtn" disable="true" mnemonicParsing="false" onAction="#btnRemoveHandler" text="remove" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbFind" layoutX="200.0" layoutY="481.0" spacing="15.0" visible="false">
+         <children>
+            <TextField fx:id="tfFindValue" promptText="enter value" />
+            <Button fx:id="findBtn" disable="true" mnemonicParsing="false" onAction="#btnFindHandler" text="find" />
+         </children>
+      </HBox>
+      <VBox layoutX="539.0" layoutY="363.0" prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="100.0" prefWidth="100.0" text="Noitice" />
+                  <Label fx:id="noiticeLablel" alignment="CENTER" maxHeight="1.7976931348623157E308" style="-fx-text-fill: red;">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane fx:id="pane" layoutX="361.0" layoutY="31.0" prefWidth="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+   </children>
+</AnchorPane>
